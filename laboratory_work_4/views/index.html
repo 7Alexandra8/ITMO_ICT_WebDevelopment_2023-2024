@@ -1,0 +1,1808 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../router/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Views - Документация по лабораторным работам</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация по лабораторным работам" class="md-header__button md-logo" aria-label="Документация по лабораторным работам" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация по лабораторным работам
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Views
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Переключиться на тёмную тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключиться на тёмную тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Переключиться на светлую тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключиться на светлую тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/7Alexandra8/ITMO_ICT_WebDevelopment_2023-2024" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация по лабораторным работам" class="md-nav__button md-logo" aria-label="Документация по лабораторным работам" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Документация по лабораторным работам
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/7Alexandra8/ITMO_ICT_WebDevelopment_2023-2024" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная №1: Сокеты
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная №1: Сокеты
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboratory_work_1/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboratory_work_1/task1.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboratory_work_1/task2.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboratory_work_1/task3.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboratory_work_1/task4.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboratory_work_1/task5.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная №2: Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная №2: Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/a_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Реализация простого сайта средствами Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Создание проекта
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Модели
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Админ-панель
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laborstory_work_2/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../laboratory_work_3/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Лабораторная №3: DRF
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная №3: DRF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная №4: Vue.js
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная №4: Vue.js
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Реализация серверной части на DRF. Документирование API.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Store
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Компоненты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Views</h1>
+
+<p>Здесь я оставлю только код с комментариями, ибо описывать весь функционал крайне долго и муторно.</p>
+<p>About.vue</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div class=&quot;about&quot;&gt;
+    &lt;h1&gt;(Здесь может быть описание книжного магазина)
+    &lt;/h1&gt;
+  &lt;h3&gt; &lt;/h3&gt;
+&lt;h3&gt;Интернет-магазин «Книжный в Нижнем» – один из ведущих в Нижнем книжных магазинов. Здесь вы можете купить книги всех направлений и стилей по выгодным ценам с бесплатной доставкой!
+
+  &lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div>
+<p>Cart.vue</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+    &lt;!-- Основной контейнер страницы корзины --&gt;
+    &lt;div class=&quot;page-cart&quot;&gt;
+        &lt;!-- Обертка для колонок в многоколоночной сетке --&gt;
+        &lt;div class=&quot;columns is-multiline&quot;&gt;
+            &lt;!-- Заголовок страницы --&gt;
+            &lt;div class=&quot;column is-12&quot;&gt;
+                &lt;h1 class=&quot;title&quot;&gt;Корзина&lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Блок с товарами в корзине --&gt;
+            &lt;div class=&quot;column is-12 box&quot;&gt;
+                &lt;!-- Таблица для отображения товаров в корзине, отображается только если в корзине есть товары --&gt;
+                &lt;table class=&quot;table is-fullwidth&quot; v-if=&quot;cartTotalLength&quot;&gt;
+                    &lt;thead&gt;
+                        &lt;!-- Заголовки столбцов таблицы --&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Товар&lt;/th&gt;
+                            &lt;th&gt;Цена&lt;/th&gt;
+                            &lt;th&gt;Количество&lt;/th&gt;
+                            &lt;th&gt;Итого&lt;/th&gt;
+                            &lt;th&gt;&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+
+                    &lt;tbody&gt;
+                        &lt;!-- Компонент CartItem используется для отображения каждого товара в корзине --&gt;
+                        &lt;CartItem
+                            v-for=&quot;item in cart.items&quot;
+                            v-bind:key=&quot;item.product.id&quot;
+                            v-bind:initialItem=&quot;item&quot;
+                            v-on:removeFromCart=&quot;removeFromCart&quot; /&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+
+                &lt;!-- Сообщение, отображаемое, если корзина пуста --&gt;
+                &lt;p v-else&gt;Ничего нет в корзине...&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Блок с общей информацией о корзине и кнопкой для перехода к оформлению заказа --&gt;
+            &lt;div class=&quot;column is-12 box&quot;&gt;
+                &lt;h2 class=&quot;subtitle&quot;&gt;Итого&lt;/h2&gt;
+
+                &lt;!-- Отображение общей стоимости и количества товаров в корзине --&gt;
+                &lt;strong&gt;{{ cartTotalPrice.toFixed(2) }}руб&lt;/strong&gt;, {{ cartTotalLength }} единиц(а)
+
+                &lt;hr&gt;
+
+                &lt;!-- Кнопка для перехода к оформлению заказа --&gt;
+                &lt;router-link to=&quot;/cart/checkout&quot; class=&quot;button is-dark&quot;&gt;Далее&lt;/router-link&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from &#39;axios&#39;
+import CartItem from &#39;@/components/CartItem.vue&#39;
+import { reactive } from &#39;vue&#39;;
+
+export default {
+    name: &#39;Cart&#39;,  // Название компонента
+    components: {
+        CartItem  // Регистрация компонента CartItem
+    },
+    data() {
+        return {
+            cart: {
+                items: []
+            }
+        }
+    },
+    mounted() {
+       // this.cart = reactive(this.$store.state.cart);
+       this. cart = this.$store.state.cart;
+
+    },
+    methods: {
+        // Метод для удаления товара из корзины
+        removeFromCart(item) {
+            this.cart.items = this.cart.items.filter(i =&gt; i.product.id !== item.product.id)
+        }
+    },
+    computed: {
+        // Вычисляемое свойство для общего количества товаров в корзине
+        cartTotalLength() {
+            return this.cart.items.reduce((acc, curVal) =&gt; {
+                return acc += curVal.quantity
+            }, 0)
+        },
+        // Вычисляемое свойство для общей стоимости товаров в корзине
+        cartTotalPrice() {
+            return this.cart.items.reduce((acc, curVal) =&gt; {
+                return acc += curVal.product.price * curVal.quantity
+            }, 0)
+        },
+    }
+}
+&lt;/script&gt;
+</code></pre></div>
+<p>Category.vue:</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+    &lt;!-- Основной контейнер страницы категории --&gt;
+    &lt;div class=&quot;page-category&quot;&gt;
+        &lt;!-- Обертка для колонок в многоколоночной сетке --&gt;
+        &lt;div class=&quot;columns is-multiline&quot;&gt;
+            &lt;!-- Заголовок страницы с именем текущей категории --&gt;
+            &lt;div class=&quot;column is-12&quot;&gt;
+                &lt;h2 class=&quot;is-size-2 has-text-centered&quot;&gt;{{ category.name }}&lt;/h2&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Компонент ProductBox используется для отображения каждого товара в категории --&gt;
+            &lt;ProductBox 
+                v-for=&quot;product in category.products&quot;
+                v-bind:key=&quot;product.id&quot;
+                v-bind:product=&quot;product&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from &#39;axios&#39;
+import { toast } from &#39;bulma-toast&#39;
+
+import ProductBox from &#39;@/components/ProductBox&#39;
+
+export default {
+    name: &#39;Category&#39;,  // Название компонента
+    components: {
+        ProductBox  // Регистрация компонента ProductBox
+    },
+    data() {
+        return {
+            category: {
+                products: []  // Инициализация свойства category с массивом товаров
+            }
+        }
+    },
+    mounted() {
+        this.getCategory()  // Вызов метода getCategory при монтировании компонента
+    },
+    watch: {
+        $route(to, from) {
+            // Слежение за изменениями маршрута, если текущий маршрут - категория, вызываем метод getCategory
+            if (to.name === &#39;Category&#39;) {
+                this.getCategory()
+            }
+        }
+    },
+    methods: {
+        // Асинхронный метод для получения данных о категории с сервера
+        async getCategory() {
+            // Извлечение slug категории из параметра маршрута
+            const categorySlug = this.$route.params.category_slug
+
+            // Установка состояния загрузки в true
+            this.$store.commit(&#39;setIsLoading&#39;, true)
+
+            // Запрос на сервер для получения данных о категории
+            axios
+                .get(`/api/v1/products/${categorySlug}/`)
+                .then(response =&gt; {
+                    // Обновление данных категории в свойстве
+                    this.category = response.data
+
+                    // Установка заголовка страницы
+                    document.title = this.category.name + &#39; | Книги&#39;
+                })
+                .catch(error =&gt; {
+                    // Обработка ошибки и вывод сообщения пользователю
+                    console.log(error)
+
+                    toast({
+                        message: &#39;Что-то пошло не так, пожалуйста, попробуйте позже(&#39;,
+                        type: &#39;is-danger&#39;,
+                        dismissible: true,
+                        pauseOnHover: true,
+                        duration: 2000,
+                        position: &#39;bottom-right&#39;,
+                    })
+                })
+
+            // Установка состояния загрузки в false после завершения запроса
+            this.$store.commit(&#39;setIsLoading&#39;, false)
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre></div>
+<p>Checkout.vue</p>
+<div class="highlight"><pre><span></span><code>    &lt;template&gt;
+    &lt;!-- Основной контейнер страницы оформления заказа --&gt;
+    &lt;div class=&quot;page-checkout&quot;&gt;
+        &lt;!-- Обертка для колонок в многоколоночной сетке --&gt;
+        &lt;div class=&quot;columns is-multiline&quot;&gt;
+            &lt;!-- Заголовок страницы --&gt;
+            &lt;div class=&quot;column is-12&quot;&gt;
+                &lt;h1 class=&quot;title&quot;&gt;Доставка&lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Блок с информацией о товарах в корзине --&gt;
+            &lt;div class=&quot;column is-12 box&quot;&gt;
+                &lt;!-- Таблица для отображения товаров --&gt;
+                &lt;table class=&quot;table is-fullwidth&quot;&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Товар&lt;/th&gt;
+                            &lt;th&gt;Цена&lt;/th&gt;
+                            &lt;th&gt;Количество&lt;/th&gt;
+                            &lt;th&gt;Итого&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;!-- Цикл для отображения каждого товара в корзине --&gt;
+                        &lt;tr v-for=&quot;item in cart.items&quot; :key=&quot;item.product.id&quot;&gt;
+                            &lt;td&gt;{{ item.product.name }}&lt;/td&gt;
+                            &lt;td&gt;${{ item.product.price }}&lt;/td&gt;
+                            &lt;td&gt;{{ item.quantity }}&lt;/td&gt;
+                            &lt;td&gt;${{ getItemTotal(item).toFixed(2) }}&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                    &lt;tfoot&gt;
+                        &lt;!-- Итоговая строка в таблице с общей стоимостью и количеством товаров --&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan=&quot;2&quot;&gt;Итого&lt;/td&gt;
+                            &lt;td&gt;{{ cartTotalLength }}&lt;/td&gt;
+                            &lt;td&gt;{{ cartTotalPrice.toFixed(2) }}руб&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Блок с деталями доставки --&gt;
+            &lt;div class=&quot;column is-12 box&quot;&gt;
+                &lt;!-- Подзаголовок блока --&gt;
+                &lt;h2 class=&quot;subtitle&quot;&gt;Детали доставки&lt;/h2&gt;
+                &lt;!-- Подсказка для пользователя --&gt;
+                &lt;p class=&quot;has-text-grey mb-4&quot;&gt;* Все поля должны быть заполнены&lt;/p&gt;
+
+                &lt;!-- Две колонки с полями для ввода информации о доставке --&gt;
+                &lt;div class=&quot;columns is-multiline&quot;&gt;
+                    &lt;!-- Первая колонка с полями для ввода имени, фамилии, email и телефона --&gt;
+                    &lt;div class=&quot;column is-6&quot;&gt;
+                        &lt;!-- Каждое поле ввода --&gt;
+                        &lt;div class=&quot;field&quot;&gt;
+                            &lt;label&gt;Имя*&lt;/label&gt;
+                            &lt;div class=&quot;control&quot;&gt;
+                                &lt;input type=&quot;text&quot; class=&quot;input&quot; v-model=&quot;first_name&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Аналогично для фамилии, email и телефона --&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Вторая колонка с полями для ввода адреса, индекса и номера дома --&gt;
+                    &lt;div class=&quot;column is-6&quot;&gt;
+                        &lt;!-- Каждое поле ввода --&gt;
+                        &lt;div class=&quot;field&quot;&gt;
+                            &lt;label&gt;Адрес*&lt;/label&gt;
+                            &lt;div class=&quot;control&quot;&gt;
+                                &lt;input type=&quot;text&quot; class=&quot;input&quot; v-model=&quot;address&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Аналогично для индекса и номера дома --&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Горизонтальная линия-разделитель --&gt;
+                &lt;hr&gt;
+                &lt;!-- Блок для ввода данных банковской карты (не реализовано в данном коде) --&gt;
+                &lt;div id=&quot;card-element&quot; class=&quot;mb-5&quot;&gt;&lt;/div&gt;
+                &lt;!-- Кнопка для эмуляции оплаты (не реальная оплата) --&gt;
+                &lt;button class=&quot;button is-primary&quot; @click=&quot;simulatePayment&quot;&gt;Оплатить&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Импорт библиотек и настроек
+import axios from &#39;axios&#39;
+
+export default {
+    // Название компонента
+    name: &#39;Checkout&#39;,
+    // Данные компонента
+    data() {
+        return {
+            // Объект корзины с товарами
+            cart: {
+                items: []
+            },
+            // Объекты для работы с платежами (Stripe, не реализовано в данном коде)
+            stripe: {},
+            card: {},
+            // Переменные для ввода данных о доставке
+            first_name: &#39;&#39;,
+            last_name: &#39;&#39;,
+            email: &#39;&#39;,
+            phone: &#39;&#39;,
+            address: &#39;&#39;,
+            zipcode: &#39;&#39;,
+            place: &#39;&#39;,
+            // Массив для хранения ошибок валидации
+            errors: []
+        }
+    },
+    // Хук жизненного цикла компонента - момент, когда компонент монтируется в DOM
+    mounted() {
+        // Установка заголовка страницы
+        document.title = &#39;Checkout | Книги&#39;
+        // Получение данных о корзине из хранилища Vuex
+        this.cart = this.$store.state.cart
+    },
+    // Методы компонента
+    methods: {
+        // Метод для вычисления общей стоимости товара
+        getItemTotal(item) {
+            return item.quantity * item.product.price
+        },
+        // Метод для эмуляции платежа (не реальная оплата)
+        simulatePayment() {
+            // Очистка массива ошибок перед валидацией
+            this.errors = []
+
+            // Валидация данных о доставке
+            if (this.first_name === &#39;&#39;) {
+                this.errors.push(&#39;Поле &quot;Имя&quot; обязательно для заполнения!&#39;)
+            }
+
+            // Аналогично для фамилии, email, телефона, адреса, индекса, номера дома
+            // ...
+
+            // Если нет ошибок в валидации
+            if (!this.errors.length) {
+                // Установка состояния загрузки в true (в реальном проекте это могло бы быть асинхронным запросом на сервер)
+                this.$store.commit(&#39;setIsLoading&#39;, true)
+
+                // Имитация запроса к серверу Stripe с задержкой в 2 секунды
+                setTimeout(async () =&gt; {
+                    // Эмуляция успешного платежа
+                    this.$store.commit(&#39;clearCart&#39;)
+                    localStorage.setItem(&#39;paymentSuccess&#39;, &#39;true&#39;)
+                    this.$router.push(&#39;/cart/success&#39;)
+                    // Установка состояния загрузки в false после завершения запроса
+                    this.$store.commit(&#39;setIsLoading&#39;, false)
+                }, 2000) // Задержка в 2 секунды
+            }
+        },
+    },
+    // Вычисляемые свойства компонента
+    computed: {
+        // Вычисление общей стоимости корзины
+        cartTotalPrice() {
+            return this.cart.items.reduce((acc, curVal) =&gt; {
+                return (acc += curVal.product.price * curVal.quantity)
+            }, 0)
+        },
+        // Вычисление общего количества товаров в корзине
+        cartTotalLength() {
+            return this.cart.items.reduce((acc, curVal) =&gt; {
+                return (acc += curVal.quantity)
+            }, 0)
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre></div>
+<p>FavouriteBooks.vue</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;!-- Компонент для отображения избранных книг --&gt;
+  &lt;div class=&quot;favorite-products&quot;&gt;
+    &lt;!-- Заголовок страницы --&gt;
+    &lt;h1 class=&quot;title&quot;&gt;Избранные книги&lt;/h1&gt;
+
+    &lt;!-- Проверка наличия избранных книг --&gt;
+    &lt;div v-if=&quot;favoriteProducts.length === 0&quot;&gt;
+      &lt;!-- Сообщение о том, что избранных книг нет --&gt;
+      &lt;p&gt;У вас пока нет избранных книг.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Если есть избранные книги --&gt;
+    &lt;div v-else&gt;
+      &lt;!-- Цикл для отображения каждой избранной книги --&gt;
+      &lt;div v-for=&quot;product in favoriteProducts&quot; :key=&quot;product.id&quot; class=&quot;column is-3&quot;&gt;
+        &lt;!-- Карточка с избранной книгой --&gt;
+        &lt;div class=&quot;box&quot;&gt;
+          &lt;!-- Изображение книги --&gt;
+          &lt;figure class=&quot;image mb-4&quot;&gt;
+            &lt;img :src=&quot;product.get_thumbnail&quot; alt=&quot;Product Thumbnail&quot;&gt;
+          &lt;/figure&gt;
+          &lt;!-- Название книги --&gt;
+          &lt;h3 class=&quot;is-size-4&quot;&gt;{{ product.name }}&lt;/h3&gt;
+          &lt;!-- Цена книги --&gt;
+          &lt;p class=&quot;is-size-6 has-text-grey&quot;&gt;{{ product.price }}руб.&lt;/p&gt;
+          &lt;!-- Кнопка для добавления/удаления из избранного --&gt;
+          &lt;button @click=&quot;toggleFavorite(product)&quot; class=&quot;button is-danger mt-4&quot;&gt;
+            {{ product.is_favorite ? &#39;Убрать из избранных&#39; : &#39;Добавить в избранное&#39; }}
+          &lt;/button&gt;
+          &lt;!-- Кнопка для перехода к подробной информации о книге --&gt;
+          &lt;router-link :to=&quot;product.get_absolute_url&quot; class=&quot;button is-dark mt-2&quot;&gt;Подробнее&lt;/router-link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Импорт библиотеки для HTTP-запросов
+import axios from &#39;axios&#39;;
+
+export default {
+  // Название компонента
+  name: &#39;FavouriteBooks&#39;,
+  // Данные компонента
+  data() {
+    return {
+      // Массив для хранения избранных книг
+      favoriteProducts: [],
+    };
+  },
+  // Хук жизненного цикла компонента - срабатывает при создании компонента
+  created() {
+    // Вызов метода для получения избранных книг
+    this.getFavoriteProducts();
+  },
+  // Методы компонента
+  methods: {
+    // Асинхронный метод для получения избранных книг с сервера
+    async getFavoriteProducts() {
+      try {
+        // Выполнение HTTP-запроса на получение избранных книг
+        const response = await axios.get(&#39;/api/v1/favorite-products&#39;);
+        // Обновление данных избранных книг в компоненте
+        this.favoriteProducts = response.data;
+      } catch (error) {
+        // Обработка ошибок при выполнении запроса
+        console.error(&#39;Ошибка при получении избранных книг&#39;, error);
+      }
+    },
+    // Асинхронный метод для переключения статуса избранного книги
+    async toggleFavorite(product) {
+      try {
+        // Выполнение HTTP-запроса на изменение статуса избранного
+        const response = await axios.patch(`/api/v1/products/${product.id}/toggle-favorite/`);
+        // Обновление статуса избранного в данных книги
+        product.is_favorite = response.data.is_favorite;
+      } catch (error) {
+        // Обработка ошибок при выполнении запроса
+        console.error(&#39;Ошибка при изменении статуса избранного&#39;, error);
+      }
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+/* Стили, применяемые только к данному компоненту */
+.image {
+  margin-top: -1.25rem;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+&lt;/style&gt;
+</code></pre></div>
+<p>Home.vue</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;!-- Домашняя страница --&gt;
+  &lt;div class=&quot;home&quot;&gt;
+    &lt;!-- Секция с главным заголовком страницы --&gt;
+    &lt;section class=&quot;hero is-medium is-dark mb-6&quot;&gt;
+      &lt;!-- Центрированный текст внутри секции --&gt;
+      &lt;div class=&quot;hero-body has-text-centered&quot;&gt;
+        &lt;!-- Заголовок с приветствием на странице --&gt;
+        &lt;p class=&quot;title mb-6&quot;&gt;
+          Добро пожаловать!
+        &lt;/p&gt;
+        &lt;!-- Подзаголовок (в данном случае пустой) --&gt;
+        &lt;p class=&quot;subtitle&quot;&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Раздел с колонками, содержащими последние продукты --&gt;
+    &lt;div class=&quot;columns is-multiline&quot;&gt;
+      &lt;!-- Колонка на всю ширину --&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;!-- Заголовок для последних продуктов --&gt;
+        &lt;h2 class=&quot;is-size-2 has-text-centered&quot;&gt;Последнее&lt;/h2&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Итерация по последним продуктам и отображение каждого в виде ProductBox --&gt;
+      &lt;ProductBox 
+        v-for=&quot;product in latestProducts&quot;
+        v-bind:key=&quot;product.id&quot;
+        v-bind:product=&quot;product&quot;/&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Импорт библиотеки для HTTP-запросов
+import axios from &#39;axios&#39;
+
+// Импорт компонента ProductBox
+import ProductBox from &#39;@/components/ProductBox&#39;
+
+export default {
+  // Название компонента
+  name: &#39;Home&#39;,
+  // Данные компонента
+  data() {
+    return {
+      // Массив для хранения последних продуктов
+      latestProducts: []
+    }
+  },
+  // Компоненты, используемые внутри Home
+  components: {
+    name:&#39;ProductBox&#39;
+  },
+  // Хук жизненного цикла компонента - срабатывает после монтирования компонента на страницу
+  mounted() {
+    // Вызов метода для получения последних продуктов
+    this.getLatestProducts()
+    // Установка заголовка страницы (в данном случае закомментировано)
+    // document.title = &#39;Домашняя | Книги&#39;
+  },
+  // Методы компонента
+  methods: {
+    // Асинхронный метод для получения последних продуктов с сервера
+    async getLatestProducts() {
+      // Установка флага загрузки данных
+      this.$store.commit(&#39;setIsLoading&#39;, true)
+
+      // Выполнение HTTP-запроса на получение последних продуктов
+      await axios
+        .get(&#39;/api/v1/latest-products/&#39;)
+        .then(response =&gt; {
+          // Обновление данных последних продуктов в компоненте
+          this.latestProducts = response.data
+        })
+        .catch(error =&gt; {
+          // Обработка ошибок при выполнении запроса
+          console.log(error)
+        })
+
+      // Сброс флага загрузки данных
+      this.$store.commit(&#39;setIsLoading&#39;, false)
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre></div>
+<p>LogIn.vue:</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+    &lt;!-- Страница входа --&gt;
+    &lt;div class=&quot;page-log-in&quot;&gt;
+        &lt;!-- Контейнер сетки из колонок --&gt;
+        &lt;div class=&quot;columns&quot;&gt;
+            &lt;!-- Центрированная колонка шириной 4 из 12 смещенная на 4 из 12 --&gt;
+            &lt;div class=&quot;column is-4 is-offset-4&quot;&gt;
+                &lt;!-- Заголовок страницы --&gt;
+                &lt;h1 class=&quot;title&quot;&gt;Вход&lt;/h1&gt;
+
+                &lt;!-- Форма для ввода данных пользователя --&gt;
+                &lt;form @submit.prevent=&quot;submitForm&quot;&gt;
+                    &lt;!-- Поле ввода имени пользователя --&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                        &lt;label&gt;Имя пользователя&lt;/label&gt;
+                        &lt;div class=&quot;control&quot;&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;input&quot; v-model=&quot;username&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Поле ввода пароля --&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                        &lt;label&gt;Пароль&lt;/label&gt;
+                        &lt;div class=&quot;control&quot;&gt;
+                            &lt;input type=&quot;password&quot; class=&quot;input&quot; v-model=&quot;password&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Оповещение об ошибках, отображается при наличии ошибок --&gt;
+                    &lt;div class=&quot;notification is-danger&quot; v-if=&quot;errors.length&quot;&gt;
+                        &lt;!-- Итерация по массиву ошибок и их отображение --&gt;
+                        &lt;p v-for=&quot;error in errors&quot; v-bind:key=&quot;error&quot;&gt;{{ error }}&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Кнопка для отправки формы --&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                        &lt;div class=&quot;control&quot;&gt;
+                            &lt;button class=&quot;button is-dark&quot;&gt;Войти&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Горизонтальная линия --&gt;
+                    &lt;hr&gt;
+
+                    &lt;!-- Ссылка на страницу регистрации --&gt;
+                    или &lt;router-link to=&quot;/sign-up&quot;&gt;нажмите тут&lt;/router-link&gt;, чтобы зарегистрироваться!
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Импорт библиотеки для HTTP-запросов
+import axios from &#39;axios&#39;
+
+// Экспорт компонента страницы входа
+export default {
+    // Название компонента
+    name: &#39;LogIn&#39;,
+    // Данные компонента
+    data() {
+        return {
+            // Переменные для хранения имени пользователя, пароля и ошибок
+            username: &#39;&#39;,
+            password: &#39;&#39;,
+            errors: []
+        }
+    },
+    // Хук жизненного цикла компонента - срабатывает после монтирования компонента на страницу
+    mounted() {
+        // Установка заголовка страницы
+        document.title = &#39;Вход | Книги&#39;
+    },
+    // Методы компонента
+    methods: {
+        // Асинхронный метод для отправки данных формы на сервер
+        async submitForm() {
+            // Очистка заголовка авторизации перед отправкой запроса
+            axios.defaults.headers.common[&quot;Authorization&quot;] = &quot;&quot;
+
+            // Удаление токена из локального хранилища
+            localStorage.removeItem(&quot;token&quot;)
+
+            // Формирование данных формы для отправки на сервер
+            const formData = {
+                username: this.username,
+                password: this.password
+            }
+
+            // Выполнение HTTP-запроса на сервер для получения токена
+            await axios
+                .post(&quot;/api/v1/token/login/&quot;, formData)
+                .then(response =&gt; {
+                    // Извлечение токена из ответа сервера
+                    const token = response.data.auth_token
+
+                    // Обновление токена в хранилище состояния приложения
+                    this.$store.commit(&#39;setToken&#39;, token)
+
+                    // Установка токена в заголовок авторизации для последующих запросов
+                    axios.defaults.headers.common[&quot;Authorization&quot;] = &quot;Token &quot; + token
+
+                    // Сохранение токена в локальном хранилище
+                    localStorage.setItem(&quot;token&quot;, token)
+
+                    // Переход на страницу корзины или на другую страницу, указанную в параметрах запроса
+                    const toPath = this.$route.query.to || &#39;/cart&#39;
+                    this.$router.push(toPath)
+                })
+                .catch(error =&gt; {
+                    // Обработка ошибок при выполнении запроса
+                    if (error.response) {
+                        for (const property in error.response.data) {
+                            this.errors.push(`${property}: ${error.response.data[property]}`)
+                        }
+                    } else {
+                        this.errors.push(&#39;Что-то пошло не так, попробуйте снова(&#39;)
+                        console.log(JSON.stringify(error))
+                    }
+                })
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre></div>
+<p>MyAccount.vue:</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;!-- Страница &quot;Мой профиль&quot; --&gt;
+  &lt;div class=&quot;page-my-account&quot;&gt;
+    &lt;!-- Контейнер сетки из колонок --&gt;
+    &lt;div class=&quot;columns is-multiline&quot;&gt;
+      &lt;!-- Широкая колонка, занимающая всю ширину --&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;!-- Заголовок страницы --&gt;
+        &lt;h1 class=&quot;title&quot;&gt;My account&lt;/h1&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Колонка с формой для изменения данных профиля --&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;!-- Подзаголовок --&gt;
+        &lt;h2 class=&quot;subtitle&quot;&gt;Изменить данные профиля&lt;/h2&gt;
+
+        &lt;!-- Форма для ввода новых данных профиля --&gt;
+        &lt;form @submit.prevent=&quot;updateProfile&quot;&gt;
+          &lt;!-- Поле ввода имени пользователя --&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label class=&quot;label&quot;&gt;Имя&lt;/label&gt;
+            &lt;div class=&quot;control&quot;&gt;
+              &lt;input type=&quot;text&quot; class=&quot;input&quot; v-model=&quot;username&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Поле ввода электронной почты --&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
+            &lt;div class=&quot;control&quot;&gt;
+              &lt;input type=&quot;email&quot; class=&quot;input&quot; v-model=&quot;email&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Здесь могут быть добавлены другие поля для изменения данных профиля --&gt;
+
+          &lt;!-- Кнопка сохранения изменений --&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;control&quot;&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;button is-primary&quot;&gt;Сохранить&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Колонка с кнопкой для выхода из аккаунта --&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;button @click=&quot;logout()&quot; class=&quot;button is-danger&quot;&gt;Log out&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Горизонтальная линия --&gt;
+      &lt;hr&gt;
+
+      &lt;!-- Колонка с заголовком и списком заказов пользователя --&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;!-- Заголовок --&gt;
+        &lt;h2 class=&quot;subtitle&quot;&gt;&lt;/h2&gt;
+
+        &lt;!-- Компонент OrderSummary для каждого заказа пользователя --&gt;
+        &lt;OrderSummary
+          v-for=&quot;order in orders&quot;
+          v-bind:key=&quot;order.id&quot;
+          v-bind:order=&quot;order&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Импорт библиотеки для HTTP-запросов
+import axios from &#39;axios&#39;
+
+// Импорт компонента OrderSummary для отображения данных заказов
+import OrderSummary from &#39;@/components/OrderSummary.vue&#39;
+
+// Экспорт компонента &quot;Мой профиль&quot;
+export default {
+  // Название компонента
+  name: &#39;MyAccount&#39;,
+  // Регистрация компонента OrderSummary для использования в шаблоне
+  components: {
+    OrderSummary
+  },
+  // Данные компонента
+  data() {
+    return {
+      // Массив для хранения данных заказов пользователя
+      orders: []
+    }
+  },
+  // Хук жизненного цикла компонента - срабатывает после монтирования на страницу
+  mounted() {
+    // Установка заголовка страницы
+    document.title = &#39;Mой профиль | Книги&#39;
+
+    // Получение данных о заказах пользователя
+    this.getMyOrders()
+  },
+  // Методы компонента
+  methods: {
+    // Метод для выхода из аккаунта
+    logout() {
+      // Очистка заголовка авторизации перед выходом
+      axios.defaults.headers.common[&quot;Authorization&quot;] = &quot;&quot;
+
+      // Удаление токена и других данных пользователя из локального хранилища
+      localStorage.removeItem(&quot;token&quot;)
+      localStorage.removeItem(&quot;username&quot;)
+      localStorage.removeItem(&quot;userid&quot;)
+
+      // Удаление токена из хранилища состояния приложения
+      this.$store.commit(&#39;removeToken&#39;)
+
+      // Переход на главную страницу
+      this.$router.push(&#39;/&#39;)
+    },
+    // Асинхронный метод для получения данных о заказах пользователя
+    async getMyOrders() {
+      // Установка флага загрузки данных
+      this.$store.commit(&#39;setIsLoading&#39;, true)
+
+      // Выполнение HTTP-запроса на сервер для получения данных о заказах
+      await axios
+        .get(&#39;/api/v1/orders/&#39;)
+        .then(response =&gt; {
+          // Запись полученных данных в массив orders
+          this.orders = response.data
+        })
+        .catch(error =&gt; {
+          // Обработка ошибок при выполнении запроса
+          console.log(error)
+        })
+
+      // Снятие флага загрузки данных
+      this.$store.commit(&#39;setIsLoading&#39;, false)
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
